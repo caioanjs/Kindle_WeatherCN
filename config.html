@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kindle WeatherCN 参数设置</title>
+    <title>Kindle WeatherCN Parameter Settings</title>
     <style>
         h1 {
             text-align: center;
@@ -26,21 +26,21 @@
     </style>
 </head>
 <body>
-<h1>Kindle WeatherCN 参数设置<br/>配置页面</h1>
+<h1>Kindle WeatherCN Parameter Settings<br/>Configuration Page</h1>
 <form action="index.html">
     <div>
-        <label>输入城市: <br/><input type="text" name="city" id="city" /></label>
+        <label>Enter City: <br/><input type="text" name="city" id="city" /></label>
     </div>
-    <div>或 输入坐标:</div>
+    <div>or Enter Coordinates:</div>
     <div>
         <label>Lat (e.g. 50.123): <input type="text" name="lat" id="lat" /></label>
         <label>Lon (e.g. 14.4): <input type="text" name="lon" id="lon" /></label>
     </div>
     <div>
-        <label>设置UTC时区<br/>
+        <label>Set UTC Timezone<br/>
             <select name="utcOffset" id="utcOffset">
-                <option value="">默认 - 根据位置匹配</option>
-                <option value="local">本地 - 根据终端时间</option>
+                <option value="">Default - Match by location</option>
+                <option value="local">Local - Use device time</option>
                 <option value="+01:00">+1 h</option>
                 <option value="-01:00">-1 h</option>
                 <option value="+02:00">+2 h</option>
@@ -71,9 +71,8 @@
         </label>
     </div>
     <div>
-        <label>设置显示语言: <br/>
+        <label>Set Display Language: <br/>
             <select name="lang" id="lang">
-                <!-- a;b (a == owm lang, b = moment locale (if different))-->
                 <option value="zh_cn">Chinese Simplified (zh_cn)</option>
                 <option value="sk">Slovak (sk)</option>
                 <option value="en">English (en)</option>
@@ -107,7 +106,7 @@
                 <option value="nl">Dutch (nl)</option>
                 <option value="pl">Polish (pl)</option>
                 <option value="pt">Portuguese (pt)</option>
-                <option value="pt_br">Português Brasil (pt_br)</option>
+                <option value="pt_br">Portuguese Brazil (pt_br)</option>
                 <option value="ro">Romanian (ro)</option>
                 <option value="ru">Russian (ru)</option>
                 <option value="sv">Swedish (sv)</option>
@@ -124,55 +123,55 @@
         </label>
     </div>
     <div>
-        <label>设置屏幕方向: <br/>
+        <label>Set Screen Orientation: <br/>
             <select name="rotation" id="rotation">
-                <option value="none">竖屏显示</option>
-                <option value="ll">向左横屏</option>
-                <option value="lr">向右横屏</option>
-                <option value="up">竖屏倒置</option>
-                <option value="">默认设置</option>
+                <option value="none">Portrait</option>
+                <option value="ll">Landscape (left)</option>
+                <option value="lr">Landscape (right)</option>
+                <option value="up">Upside-down portrait</option>
+                <option value="">Default</option>
             </select>
         </label>
     </div>
     <div>
-        <label>设置温度单位: <br/>
+        <label>Set Temperature Unit: <br/>
             <select name="units" id="units">
-                <option value="metric">摄氏度 - ℃</option>
-                <option value="imperial">华氏度 - ℉</option>
-                <option value="">设置默认</option>
+                <option value="metric">Celsius - ℃</option>
+                <option value="imperial">Fahrenheit - ℉</option>
+                <option value="">Default</option>
             </select>
         </label>
     </div>
     <div>
-        <label>温度显示: <br/>
+        <label>Temperature Display: <br/>
             <select name="tempType" id="tempType">
-                <option value="actual">实际温度</option>
-                <option value="feelsLike">体感温度</option>
-                <option value="">默认温度</option>
+                <option value="actual">Actual Temperature</option>
+                <option value="feelsLike">Feels Like</option>
+                <option value="">Default</option>
             </select>
         </label>
     </div>
     <div>
-        <label>设置夜间模式: <br/>
+        <label>Set Night Mode: <br/>
             <select name="night" id="night">
-                <option value="off">关闭夜间模式</option>
-                <option value="auto">自动切换模式</option>
-                <option value="on">启用夜间模式</option>
-                <option value="">默认设置</option>
+                <option value="off">Off</option>
+                <option value="auto">Auto Switch</option>
+                <option value="on">On</option>
+                <option value="">Default</option>
             </select>
         </label>
     </div>
     <div>
-        <label>自定义 OWM Appid-Key: <br/><input type="text" name="appId" id="appId"/></label>
+        <label>Custom OWM Appid-Key: <br/><input type="text" name="appId" id="appId"/></label>
     </div>
     <div>
-        <input type="submit" value="保存当前设置"/>
+        <input type="submit" value="Save Current Settings"/>
     </div>
 </form>
 <script type="application/javascript">
-    var params={};
+    var params = {};
     window.location.search
-        .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str,key,value) {
+        .replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
                 params[key] = decodeURIComponent(value);
             }
         );
