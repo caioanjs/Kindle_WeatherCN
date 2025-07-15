@@ -1,49 +1,47 @@
 # Kindle_WeatherCN
-Kindle WeatherCN，中文台历系统
-原理：内置浏览器 访问H5页面
+Kindle WeatherCN, Chinese calendar system
+Principle: Built-in browser accesses H5 page
 
 ![Image text](https://raw.githubusercontent.com/0111/Kindle_WeatherCN/main/00-JustSoso.jpg)
 
-# 重要的第一步：关闭屏幕休眠模式
-点击，放大镜，搜索框中输入： ～ds 回车
+# Important First Step: Turn Off Screen Sleep Mode
+Click the magnifying glass, type in the search box: ~ds and press Enter
 
-操作参考：https://bookfere.com/post/150.html
+Operation reference: https://bookfere.com/post/150.html
 
 
-# 方法一：访问公网站点
-## 测试站点
-2025年的版本修复了：kindle本地时钟不准的问题，程序每30分钟会主动从互联网同步正确时间。
+# Method One: Access Public Website
+## Test Site
+The 2025 version has fixed: the Kindle's inaccurate local clock issue. The program will actively sync the correct time from the internet every 30 minutes.
 
-直接访问=> https://kw6.netlify.app
+Direct access => https://kw6.netlify.app
 
-自定义设置：点击 页面“城市”，进入自定义参数设置，点击保存后生成配置参数，保存该网址即可。
+Custom settings: Click the "City" on the page to enter custom parameter settings. After clicking save, a configuration URL will be generated. Just save this URL.
 
-备用站点：
+Backup sites:
 
-测试站点：https://0111.github.io/Kindle_WeatherCN
+Test site: https://0111.github.io/Kindle_WeatherCN
 
-测试站点：https://0111.github.io/Kindle_WeatherCN/config.html 
+Test site: https://0111.github.io/Kindle_WeatherCN/config.html
 
-Chrome模拟600*700的显示屏效果（Kindle 7th大体一致）
+Chrome simulates a 600*700 display (roughly matches Kindle 7th Gen)
 
 ![Image text](https://raw.githubusercontent.com/0111/Kindle_WeatherCN/main/05-Chome_WebView.png)
 
 
-# 方法二：自主搭建服务器
-## 第一步：下载解压Kindle_WeatherCN脚本
+# Method Two: Host Your Own Server
+## Step One: Download and extract the Kindle_WeatherCN script
 
-## 第二步：将www目录发布到web站点
+## Step Two: Deploy the www directory to your web server
 
-## 第三步：原生浏览器中访问 http://website 即可
+## Step Three: Visit http://website using the native Kindle browser
 ![Image text](https://raw.githubusercontent.com/0111/Kindle_WeatherCN/main/03-WebVist_127-0-0-2.png)
 
-## 第四步：自定义设置所在城市 
-访问页面 http://website/config.html 
-
+## Step Four: Customize your city setting
+Visit the page http://website/config.html
 
 ![Image text](https://raw.githubusercontent.com/0111/Kindle_WeatherCN/main/04-Setting_City.png)
 
-正确配置后，选择“应用配置”
+After correct configuration, choose “Apply Configuration”
 
-在新页面加载后，保存该书签即可。
-
+Once the new page loads, save it as a bookmark.
